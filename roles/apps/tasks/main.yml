@@ -2,7 +2,7 @@
 
 - name: Download app repo
   ansible.builtin.git:
-    repo: https://github.com/clusterinthecloud/apps.git
+    repo: https://github.com/mntbighker/apps.git
     dest: /opt/apps
     version: master
   register: apps

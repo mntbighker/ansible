@@ -20,14 +20,14 @@
 
 - name: Copy aws-credentials.csv
   ansible.builtin.copy:
-    src: /home/rocky/aws-credentials.csv
+    src: /home/ec2-user/aws-credentials.csv
     dest: /home/slurm/aws-credentials.csv
     owner: slurm
     group: slurm
     mode: "0700"
-  when: '"/home/rocky/aws-credentials.csv" is exists'
+  when: '"/home/ec2-user/aws-credentials.csv" is exists'
 
 - name: Delete public aws-credentials.csv
   ansible.builtin.file:
-    path: /home/rocky/aws-credentials.csv
+    path: /home/ec2-user/aws-credentials.csv
     state: absent

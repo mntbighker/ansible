@@ -99,12 +99,14 @@
 
 - name: Create slurm accounting database
   community.mysql.mysql_db:
+    login_unix_socket: "/var/lib/mysql/mysql.sock"
     name: slurmacct
     state: present
   when: slurm_role == "mgmt"
 
 - name: Create slurm MySQL user
   community.mysql.mysql_user:
+    login_unix_socket: "/var/lib/mysql/mysql.sock"
     name: slurm
     password: "{{ slurm_accounting_db_password }}"
     priv: 'slurmacct.*:ALL'

@@ -7,8 +7,8 @@
   changed_when: '"Nothing to do" not in dnf_result.stdout'
 
 - name: Install 389-ds
-  ansible.builtin.package:
-    name: 389-ds-base
+  ansible.builtin.command:
+    cmd: dnf -y install 389-ds-base
 
 - name: Check if 389 setup already run
   ansible.builtin.command: systemctl list-unit-files dirsrv@.service  # noqa no-changed-when command-instead-of-module

@@ -149,11 +149,13 @@
 
 - name: Create webui database
   community.mysql.mysql_db:
+    login_unix_socket: "/var/lib/mysql/mysql.sock"
     name: webui
     state: present
 
 - name: Create webui MySQL user
   community.mysql.mysql_user:
+    login_unix_socket: "/var/lib/mysql/mysql.sock"
     name: webui
     password: "{{ webui_database_password }}"
     priv: 'webui.*:ALL'

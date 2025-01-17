@@ -70,7 +70,7 @@
     dest: /usr/local/sbin/add_user_ldap
     mode: "0700"
   vars:
-    python_bin: /usr/bin/python3.8
+    python_bin: /usr/bin/python3.11
 
 - name: Create cluster-internal SSH key for OCI user
   ansible.builtin.user:

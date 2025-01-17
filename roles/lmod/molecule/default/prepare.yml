@@ -2,8 +2,8 @@
 - name: Prepare
   hosts: all
   tasks:
-    - name: disable powertools module  # powertools is missing by default in CentOS 8
-      command: dnf config-manager --set-disabled powertools
+    # - name: disable powertools module  # powertools is missing by default in CentOS 8
+    #   command: dnf config-manager --set-disabled powertools
 
     - name: make ansible config dir
       file:

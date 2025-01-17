@@ -76,7 +76,7 @@
     name:
       - gunicorn
     virtualenv: /opt/webui_venv
-    virtualenv_command: /usr/bin/python3.8 -m venv
+    virtualenv_command: /usr/bin/python3.11 -m venv
   register: webui_venv
 
 - name: Create webui group

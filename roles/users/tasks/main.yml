@@ -64,10 +64,6 @@
     mode: u=rw,g=r,o=
     validate: /usr/sbin/visudo -cf %s
 
-- name: Install python38
-  ansible.builtin.package:
-    name: python38
-
 - name: Copy in LDAP add user script
   ansible.builtin.template:
     src: add_user_ldap.j2

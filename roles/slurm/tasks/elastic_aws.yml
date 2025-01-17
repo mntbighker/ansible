@@ -7,10 +7,10 @@
     virtualenv: /opt/cloud_sdk
 
 # This currently fails on Python 3.6
-- ansible.builtin.name: generate boto3 mypy stubs
-  command: /opt/cloud_sdk/bin/python -m mypy_boto3
-  register: result
-  changed_when: '"Discovered" in result.stdout'
+# - ansible.builtin.name: generate boto3 mypy stubs
+#   command: /opt/cloud_sdk/bin/python -m mypy_boto3
+#   register: result
+#   changed_when: '"Discovered" in result.stdout'
 
 - name: Install startnode support module
   ansible.builtin.copy:

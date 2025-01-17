@@ -2,4 +2,4 @@
 
 - name: Install gcc-toolset
   ansible.builtin.package:
-    name: gcc-toolset-9
+    name: gcc-toolset-12

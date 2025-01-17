@@ -10,7 +10,7 @@
 - name: Install startnode support module
   ansible.builtin.copy:
     src: citc_gcp.py  # should have this to be generic
-    dest: /opt/cloud_sdk/lib/python3/site-packages/citc_cloud.py
+    dest: /opt/cloud_sdk/lib/python3.9/site-packages/citc_cloud.py
     mode: u=rw,g=r,o=r
 
 - name: Copy mgmt-sa-credentials.json

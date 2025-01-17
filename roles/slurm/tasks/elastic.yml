@@ -1,8 +1,4 @@
 ---
-- name: Install python38
-  ansible.builtin.package:
-    name: python38
-
 - name: Install common tools
   ansible.builtin.pip:
     name:

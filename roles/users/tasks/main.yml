@@ -64,14 +64,6 @@
     mode: u=rw,g=r,o=
     validate: /usr/sbin/visudo -cf %s
 
-- name: Copy in LDAP add user script
-  ansible.builtin.template:
-    src: add_user_ldap.j2
-    dest: /usr/local/sbin/add_user_ldap
-    mode: "0700"
-  vars:
-    python_bin: /usr/bin/python3
-
 - name: Create cluster-internal SSH key for OCI user
   ansible.builtin.user:
     name: opc

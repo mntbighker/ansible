@@ -42,7 +42,6 @@
     - ssh
     - security_updates
     - ntp
-    - sssd
     - users
   tasks:
     - name: Copy SSH public keys to slurm account

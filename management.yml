@@ -58,7 +58,6 @@
   roles:
     - finalise
     - get_secrets
-    - webui
     - monitoring
     - packages
     - devtoolset

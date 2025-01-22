@@ -21,7 +21,7 @@
           csp:
           cluster_id: example
           ansible_repo: https://github.com/mntbighker/ansible.git
-          ansible_branch: 11.1.0
+          ansible_branch: 6
         dest: /tmp/startnode.yaml
         mode: u=rw,g=r,o=r
 

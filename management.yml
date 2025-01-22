@@ -58,7 +58,6 @@
   tags: finalise
   roles:
     - finalise
-    - apps
     - get_secrets
     - webui
     - monitoring

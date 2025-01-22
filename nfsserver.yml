@@ -6,5 +6,4 @@
     - nfs_server
     - ssh
     - ntp
-    - sssd
     - monitoring

@@ -17,7 +17,6 @@
     - filesystem
     - ssh
     - ntp
-    - sssd
     - lmod
     - packages
     - mpi

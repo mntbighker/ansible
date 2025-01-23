@@ -119,7 +119,7 @@ build {
     }
 
     provisioner "file" {
-        source = var.ca_cert
+        source = /etc/pki/ca-trust/source/ca-bundle.legacy.crt
         destination = "/tmp/CA.crt"
     }
 

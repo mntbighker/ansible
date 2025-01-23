@@ -64,14 +64,6 @@
     enabled: true
     state: started
 
-- name: Add Slurm repository
-  ansible.builtin.yum_repository:
-    name: slurm
-    description: Slurm
-    baseurl: https://download.opensuse.org/repositories/home:/Milliams:/citc/EPEL_8_CentOS/
-    gpgcheck: true
-    gpgkey: https://download.opensuse.org/repositories/home:/Milliams:/citc/EPEL_8_CentOS/repodata/repomd.xml.key
-
 - name: Create slurm group
   ansible.builtin.group:
     name: slurm

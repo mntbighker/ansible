@@ -1,4 +1,3 @@
-ca_cert = "{{ ca_cert }}"
 cluster = "{{ startnode_config.cluster_id }}"
 destination_image_name = "citc-slurm-compute"
 ssh_username = "{%- if ansible_local.citc.csp in ["google"] -%}centos{%- elif ansible_local.citc.csp in ["aws"] -%}rhel{%- else -%}opc{%- endif -%}"

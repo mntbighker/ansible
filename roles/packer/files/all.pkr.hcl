@@ -20,7 +20,6 @@ variable "oracle_key_file" {}
 
 variable "destination_image_name" {}
 variable "cluster" {}
-variable "ca_cert" {}
 variable "ssh_username" {}
 
 source "googlecompute" "google" {

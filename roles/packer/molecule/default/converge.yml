@@ -7,4 +7,4 @@
         name: packer
       vars:
         ldap_dm_password: this_is_the_ldap_dm_password
-        ca_cert: /root/CA.crt
+        ca_cert: /etc/pki/ca-trust/source/ca-bundle.legacy.crt

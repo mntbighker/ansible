@@ -59,7 +59,7 @@ def create_node_config(client, hostname: str, nodespace: Dict[str, str], ssh_key
 #    if not images:
 #        raise RuntimeError(f"No matching image found")
 #    image = images[0]['ImageId']
-    image = "ami-0f3f75c1baf382801"
+    image = "ami-01f2a077ed9c6b39c"
     config = {
         "ImageId": image,
         "InstanceType": shape,

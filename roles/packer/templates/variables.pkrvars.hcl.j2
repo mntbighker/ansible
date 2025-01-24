@@ -1,6 +1,6 @@
 cluster = "{{ startnode_config.cluster_id }}"
-destination_image_name = "citc-slurm-compute"
-ssh_username = "{%- if ansible_local.citc.csp in ["google"] -%}centos{%- elif ansible_local.citc.csp in ["aws"] -%}rhel{%- else -%}opc{%- endif -%}"
+destination_image_name = "citc-node-1-23-25"
+ssh_username = "{%- if ansible_local.citc.csp in ["google"] -%}centos{%- elif ansible_local.citc.csp in ["aws"] -%}ec2-user{%- else -%}opc{%- endif -%}"
 
 aws_arch = "x86_64"
 aws_region = "{%- if startnode_config.region is defined -%}{{ startnode_config.region }}{%- endif -%}"

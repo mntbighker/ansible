@@ -62,7 +62,7 @@ source "amazon-ebs" "aws" {
     instance_type = var.aws_instance_type
     source_ami_filter {
         filters = {
-            name = "Actual-thor-node-use"
+            name = "citc-node-1-23-25"
             architecture = var.aws_arch
         }
         owners = ["003148221729"]

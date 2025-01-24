@@ -19,7 +19,7 @@ install_packages:
   - python3-devel
   - python3.11-devel
   - "@Development Tools"
-  - vim
+  - vim-enhanced
 
 mpi_packages:
   oracle:

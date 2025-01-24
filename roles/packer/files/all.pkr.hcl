@@ -69,6 +69,7 @@ source "amazon-ebs" "aws" {
         most_recent = true
     }
     ssh_username = var.ssh_username
+    temporary_key_pair_type = "ed25519"
     vpc_filter {
         filter {
             name = "tag:cluster"

@@ -1,5 +1,5 @@
 cluster = "{{ startnode_config.cluster_id }}"
-destination_image_name = "citc-node-1-23-25"
+destination_image_name = "thor-node-*"
 ssh_username = "{%- if ansible_local.citc.csp in ["google"] -%}centos{%- elif ansible_local.citc.csp in ["aws"] -%}ec2-user{%- else -%}opc{%- endif -%}"
 
 aws_arch = "x86_64"

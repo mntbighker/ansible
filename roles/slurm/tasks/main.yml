@@ -82,7 +82,7 @@
 - name: Install Slurm
   ansible.builtin.package:
     name:
-      - slurm-slurm
+      - slurm
       - slurm-slurmdbd
       - slurm-slurmctld
       - slurm-contribs

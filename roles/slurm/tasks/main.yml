@@ -81,10 +81,15 @@
 
 - name: Install Slurm
   ansible.builtin.package:
-    name: "{{ slurm_packages | map('regex_replace', '^(.*)$', slurm_package_template) | list }}"
+    name:
+      - slurm-slurm
+      - slurm-slurmdbd
+      - slurm-slurmctld
+      - slurm-contribs
+      - slurm-doc
+      - slurm-slurmd
+      - slurm-torque
     state: present
-  vars:
-    slurm_package_template: "slurm-\\1-{{ slurm_version }}*"  # The \1 will be replaced by the package name ↑
   register: slurm_installed
   until: slurm_installed is not failed
   retries: 5

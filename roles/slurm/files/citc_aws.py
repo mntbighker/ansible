@@ -49,7 +49,7 @@ def create_node_config(client, hostname: str, nodespace: Dict[str, str], ssh_key
         raise ValueError(f"'{shape}' architecture ({features['arch']}) not recognised")
     images = client.describe_images(
         Filters=[
-            {'Name': 'name', 'Values': ['thor-node-*']},
+            {'Name': 'name', 'Values': ['thor-head-ami-*']},
             # {'Name': 'tag:cluster', 'Values': [nodespace['cluster_id']]},
             {'Name': 'architecture', 'Values': [arch]},
         ],
@@ -59,7 +59,6 @@ def create_node_config(client, hostname: str, nodespace: Dict[str, str], ssh_key
     if not images:
         raise RuntimeError(f"No matching image found")
     image = images[0]['ImageId']
-#    image = "ami-01f2a077ed9c6b39c"
     config = {
         "ImageId": image,
         "InstanceType": shape,

@@ -12,7 +12,7 @@ sudo yum install -y epel-release
 sudo dnf install -y kernel-devel-$(uname -r) kernel-headers-$(uname -r)  # For Nvidia drivers, TODO move into docs for that feature
 {% elif ansible_local.citc.csp == "oracle" %}
 sudo dnf install -y oracle-epel-release-el8
-sudo dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+sudo dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 sudo dnf config-manager --set-enabled ol8_codeready_builder
 {% endif %}
 sudo mkdir -p /etc/ansible/facts.d/

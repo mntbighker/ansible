@@ -82,13 +82,7 @@
 - name: Install Slurm
   ansible.builtin.package:
     name:
-      - slurm
-      - slurm-slurmdbd
-      - slurm-slurmctld
-      - slurm-contribs
       - slurm-doc
-      - slurm-slurmd
-      - slurm-torque
     state: present
   register: slurm_installed
   until: slurm_installed is not failed

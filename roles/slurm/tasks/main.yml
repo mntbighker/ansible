@@ -227,12 +227,11 @@
     enabled: true
   when: slurm_role == "mgmt"
 
-- name: Open slurm port in firewall
-  ansible.posix.firewalld:
-    port: 6818/tcp
-    permanent: true
-    state: enabled
-  notify: Restart firewalld
+- name: Disable node firewall
+  ansible.builtin.service:
+    name: firewalld
+    enabled: false
+  when: slurm_role == "compute"
 
 - name: Enable service slurmd
   ansible.builtin.service:

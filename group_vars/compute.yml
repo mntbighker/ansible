@@ -12,7 +12,9 @@ mpi_packages:
   google:
     - mpich
     - openmpi
-  aws: []
+  aws:
+    - mpich
+    - openmpi
 
 monitoring_role: client
 

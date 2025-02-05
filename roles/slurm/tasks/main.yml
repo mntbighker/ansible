@@ -250,7 +250,7 @@
     mode: 0644
     section: Unit
     option: After
-    value: munge.service network-online.target mount-shared.mount sssd.service
+    value: munge.service network-online.target mnt-shared.mount sssd.service
   when: slurm_role == "compute"
 
 - name: Enable service slurmd

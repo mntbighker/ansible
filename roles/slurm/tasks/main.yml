@@ -233,6 +233,12 @@
     enabled: false
   when: slurm_role == "compute"
 
+- name: Install slurmd service from template
+  ansible.builtin.template:
+    src: citc-slurmd.service.j2
+    dest: /usr/lib/systemd/system/slurmd.service
+    mode: "0755"
+    
 - name: Enable service slurmd
   ansible.builtin.service:
     name: slurmd

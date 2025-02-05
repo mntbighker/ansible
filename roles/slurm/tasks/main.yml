@@ -258,6 +258,7 @@
     name: slurmd
     state: started
     enabled: true
+    no_block: true
   when: slurm_role == "compute"
 
 # As of Slurm 18.08 the slurmdbd service doesn't become available immediately

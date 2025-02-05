@@ -233,15 +233,30 @@
     enabled: false
   when: slurm_role == "compute"
 
-- name: Install slurmd service from template
-  ansible.builtin.template:
-    src: citc-slurmd.service.j2
-    dest: /usr/lib/systemd/system/slurmd.service
-    mode: "0755"
+- name: Create a slurmd.service override directory
+  file:
+    owner: root
+    group: root
+    mode: 0755
+    path: /etc/systemd/system/slurmd.service.d
+    state: directory
+  when: slurm_role == "compute"
     
+- name: Set up slurmd.service override
+  ini_file:
+    dest: /etc/systemd/system/slurmd.service.d/slurmd_override.conf
+    owner: root
+    group: root
+    mode: 0644
+    section: Unit
+    option: ConditionPathIsMountPoint
+    value: /mnt/shared/etc/slurm/
+  when: slurm_role == "compute"
+
 - name: Enable service slurmd
   ansible.builtin.service:
     name: slurmd
+    state: started
     enabled: true
   when: slurm_role == "compute"
 

@@ -249,8 +249,8 @@
     group: root
     mode: 0644
     section: Unit
-    option: ConditionPathIsMountPoint
-    value: /mnt/shared/etc/slurm/
+    option: After
+    value: munge.service network-online.target mount-shared.mount sssd.service
   when: slurm_role == "compute"
 
 - name: Enable service slurmd

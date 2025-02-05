@@ -32,8 +32,8 @@
   ansible.posix.mount:
     path: /mnt/shared
     src: "{{ filesystem_target_address }}:/"
-    fstype: nfs
-    opts: defaults,nofail,nosuid
+    fstype: nfs4
+    opts: nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport,_netdev,nofail,nosuid
     state: mounted
   when:
     ansible_local.citc.csp == "aws"

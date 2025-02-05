@@ -69,6 +69,7 @@ source "amazon-ebs" "aws" {
         most_recent = true
     }
     ssh_username = var.ssh_username
+    ssh_interface = "private_ip"
     temporary_key_pair_type = "ed25519"
     vpc_filter {
         filter {

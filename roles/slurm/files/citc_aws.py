@@ -49,8 +49,8 @@ def create_node_config(client, hostname: str, nodespace: Dict[str, str], ssh_key
         raise ValueError(f"'{shape}' architecture ({features['arch']}) not recognised")
     images = client.describe_images(
         Filters=[
-            {'Name': 'name', 'Values': ['thor-node-packer*']},
-            # {'Name': 'tag:cluster', 'Values': [nodespace['cluster_id']]},
+            # {'Name': 'name', 'Values': ['thor-node-packer*']},
+            {'Name': 'tag:cluster', 'Values': [nodespace['cluster_id']]},
             {'Name': 'architecture', 'Values': [arch]},
         ],
         Owners=['self'],

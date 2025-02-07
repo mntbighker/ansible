@@ -14,8 +14,3 @@ EOF'
 
 sudo chmod u=rw,g=,o= /etc/ansible/facts.d/citc.fact
 sudo mv /tmp/citc_authorized_keys /root/citc_authorized_keys
-
-echo 'packer' | sudo -S sh -c '
-cat >> /etc/hosts <<EOF
-172.16.2.14 mgmt
-EOF'

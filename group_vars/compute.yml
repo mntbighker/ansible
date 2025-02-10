@@ -2,6 +2,7 @@
 slurm_packages:
   - slurmd
   - libpmi
+  - strace
 
 slurm_role: compute
 
@@ -32,7 +33,6 @@ mpi_packages:
     - pmix pmix-tools
   aws:
     - mpich
-    - strace
     - openmpi
     - hdf5-static
     - hdf5-mpich-static

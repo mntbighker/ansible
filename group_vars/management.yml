@@ -29,8 +29,11 @@ mpi_packages:
   google:
     - openmpi-devel
     - mpich-devel
-  aws: []
-
+  aws:
+    - openmpi-devel
+    - mpich-devel
+    - hwloc-devel
+    
 monitoring_role: master
 ldap_dm_password: "{{ lookup('ansible.builtin.password', '/etc/citc/ldapdmpasswordfile', chars=['ascii_letters', 'digits']) }}"
 

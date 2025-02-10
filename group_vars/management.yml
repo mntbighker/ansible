@@ -6,6 +6,7 @@ slurm_packages:
   - slurmctld
   - slurmdbd
   - libpmi
+  - strace
 
 slurm_role: mgmt
 

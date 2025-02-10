@@ -44,6 +44,8 @@ mpi_packages:
     - pmix-devel
     - pmix
     - pmix-tools
+    - hwloc
+    - hwloc-devel
 
 monitoring_role: client
 

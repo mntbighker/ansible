@@ -16,23 +16,18 @@ slurm_elastic:
 
 install_packages:
   - xorg-x11-xauth
-  - openmpi-devel
   - python3-devel
   - python3.11-devel
   - "@Development Tools"
   - vim-enhanced
+  - hwloc-devel
+  - openmpi-devel
+  - mpich-devel
 
 mpi_packages:
-  oracle:
-    - openmpi-devel
-    - mpich-devel
-  google:
-    - openmpi-devel
-    - mpich-devel
-  aws:
-    - openmpi-devel
-    - mpich-devel
-    - hwloc-devel
+  oracle: []
+  google: []
+  aws: []
     
 monitoring_role: master
 ldap_dm_password: "{{ lookup('ansible.builtin.password', '/etc/citc/ldapdmpasswordfile', chars=['ascii_letters', 'digits']) }}"

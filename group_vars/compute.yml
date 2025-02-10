@@ -42,7 +42,8 @@ mpi_packages:
     - fmt-devel
     - xtensor-devel
     - pmix-devel
-    - pmix pmix-tools
+    - pmix
+    - pmix-tools
 
 monitoring_role: client
 

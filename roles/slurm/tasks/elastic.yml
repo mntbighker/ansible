@@ -115,6 +115,8 @@
       {% if ansible_local.citc.csp == "aws" %}
       dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
       dnf install -y jq python3 awscli
+      perl -pi -e 's/# End of file/\* soft memlock unlimited\n$&/s' /etc/security/limits.conf
+      perl -pi -e 's/# End of file/\* hard memlock unlimited\n$&/s' /etc/security/limits.conf
       # TODO try to do this without using Python
       # python3.9 -m pip install awscli
       region=$(curl --silent http://169.254.169.254/latest/dynamic/instance-identity/document | jq --raw-output '.region')

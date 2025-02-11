@@ -1,6 +1,9 @@
-# ACCOUNTING
 JobAcctGatherType=jobacct_gather/cgroup
 JobAcctGatherFrequency=30
+# SlurmctldParameters=idle_on_node_suspend
+
+# nss_slurm is an optional NSS plugin that can permit passwd, group and cloud node host resolution for a job on the compute node to be serviced through the local slurmstepd process.
+LaunchParameters=enable_nss_slurm
 
 AccountingStorageType=accounting_storage/slurmdbd
 

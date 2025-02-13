@@ -19,6 +19,8 @@ mpi_packages:
     - xtensor-devel
     - pmix-devel
     - pmix pmix-tools
+    - hwloc
+    - hwloc-devel
   google:
     - mpich
     - openmpi
@@ -31,6 +33,8 @@ mpi_packages:
     - xtensor-devel
     - pmix-devel
     - pmix pmix-tools
+    - hwloc
+    - hwloc-devel
   aws:
     - mpich
     - openmpi

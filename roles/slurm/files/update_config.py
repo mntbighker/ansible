@@ -39,14 +39,14 @@ def get_nodespace() -> Dict[str, Dict[str, str]]:
 
 
 def encode_nodename(shape_name: str, node_number: int, cluster_id: str, ad: Optional[int] = None) -> str:
-    if ad is not None:
-        return "{}-ad{}-{:0>4}".format(shape_name.lower().replace(".", "-"), ad, node_number)
-    else:
-        return "{}-{}-{:0>4}".format(cluster_id, shape_name.lower().replace(".", "-"), node_number)
+    # if ad is not None:
+    #     return "{}-ad{}-{:0>4}".format(shape_name.lower().replace(".", "-"), ad, node_number)
+    # else:
+    return "{}-{}-{:0>4}".format(cluster_id, shape_name.lower().replace(".", "-"), node_number)
 
 
 def create_slurmconf_line(number: int, shape_info: Dict, shape: str, cluster_id, ad: Optional[int] = None):
-    nodename = encode_nodename(shape, number, cluster_id, ad)
+    nodename = encode_nodename(number, cluster_id)
     arch = shape_info.get("arch", "x86_64")
     features = "shape={shape},ad={ad},arch={arch}".format(shape=shape, ad=ad, arch=arch)
     config_template = 'NodeName={nodename:40} State={state:7} SocketsPerBoard={sockets:<1} CoresPerSocket={cores_per_socket:<3} ThreadsPerCore={threads_per_core:<1} RealMemory={memory:<10} Gres="{gres}" Features="{features}"'

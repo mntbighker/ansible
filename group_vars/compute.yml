@@ -46,9 +46,7 @@ mpi_packages:
     - fmt-devel
     - xtensor-devel
     - pmix-devel
-    - pmix
     - pmix-tools
-    - hwloc
     - hwloc-devel
 
 monitoring_role: client

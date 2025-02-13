@@ -20,9 +20,9 @@ install_packages:
   - python3.11-devel
   - "@Development Tools"
   - vim-enhanced
-  - hwloc-devel
   - openmpi-devel
   - mpich-devel
+  - hwloc-devel
 
 mpi_packages:
   oracle: []

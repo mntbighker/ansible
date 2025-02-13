@@ -20,16 +20,26 @@ install_packages:
   - python3.11-devel
   - "@Development Tools"
   - vim-enhanced
-  - openmpi-devel
-  - mpich-devel
-  - hwloc-devel
 
 mpi_packages:
   oracle: []
   google: []
-  aws: []
-    
+  aws:
+    - openmpi-devel
+    - mpich-devel
+    - hwloc-devel
+    - hdf5-static
+    - hdf5-mpich-static
+    - hdf5-openmpi-static
+    - libpng-devel
+    - pugixml-devel
+    - fmt-devel
+    - xtensor-devel
+    - pmix-devel
+    - pmix-tools
+
 monitoring_role: master
+
 ldap_dm_password: "{{ lookup('ansible.builtin.password', '/etc/citc/ldapdmpasswordfile', chars=['ascii_letters', 'digits']) }}"
 
 ldap_hostname: "{{ ansible_nodename }}"

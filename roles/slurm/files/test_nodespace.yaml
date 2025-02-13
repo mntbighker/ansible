@@ -1,5 +1,5 @@
 ---
 ad_root: "HERE-AD-"
-compartment_id: "ex-eccoe-university-bristol"
-zone: 'europe-west4-a'
+compartment_id: "foo.bar"
+zone: 'us-gov-east-1'
 subnet: 'default'
